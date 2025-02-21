@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\homeController;
+// use app\Http\Controllers\ViewController;
 use Illuminate\Support\Facades\Route;
-
+// require_once __DIR__.'/app/Http/Controllers/viewController.php';
+// use app\Http\Controllers\ViewController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +16,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [homeController::class , 'showidex']);
